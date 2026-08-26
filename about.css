@@ -1,0 +1,47 @@
+body {
+    background-color:   rgb(189, 185, 185);
+   /* background-image: url("watch.jpg"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: default;
+    overflow-y: auto;
+    
+}
+
+h1 {
+    text-align: left;
+    color: white;
+    font-size: 35px;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+h3 {
+  text-align: left;
+  color: white;
+  font-size: 25px;
+}
+
+h4 {
+  text-align: left;
+  color: white;
+  font-size: 20px;
+}
+
+h5 {
+  text-align: left;
+  color: white;
+  font-size: 15px;
+}
+
+p {
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
