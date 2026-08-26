@@ -1,9 +1,9 @@
 body {
     background-color:   rgb(189, 185, 185);
-   /* background-image: url("watch.jpg"); */
+    background-image: url("watch.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: default;
+    background-position: Top;
     overflow-y: auto;
     
 }
