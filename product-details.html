@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Watch Kadai | Product Details</title>
+
+    <link rel="stylesheet" href="product-details.css">
+</head>
+
+<body>
+
+    <div class="product-details-container">
+
+        <div class="product-image">
+            <img id="productImage" src="" alt="Watch">
+        </div>
+
+        <div class="product-info">
+            <div class="top-section">
+    <span class="wishlist">♡</span>
+</div>
+
+            <h1 id="productName"></h1>
+
+            <h2 id="productPrice"></h2>
+
+            <p class="description" id="productDescription"></p>
+<div class="specifications">
+    <h3>Product Specifications</h3>
+
+      <p><strong>Color:</strong> <span id="productColor"></span></p>
+    <p><strong>Strap:</strong> <span id="productStrap"></span></p>
+    <p><strong>Material:</strong> <span id="productMaterial"></span></p>
+    <p><strong>Water Resistance:</strong> <span id="productWater"></span></p>
+</div>
+
+            <p>
+                <strong>Warranty:</strong>
+                <span id="productWarranty"></span>
+            </p>
+
+            <p><strong>Availability:</strong> In Stock</p>
+
+<p class="rating">★★★★★ <span>4.8/5</span></p>
+
+<p class="offer">🎉 Special Offer: Free Delivery Available</p>
+
+<p class="secure">🔒 100% Secure Payment</p>
+<div class="quantity">
+    <button id="decrease">−</button>
+    <span id="quantityValue">1</span>
+    <button id="increase">+</button>
+</div>
+<div class="buttons">
+    <button class="buy-now">Buy Now</button>
+    <button class="add-cart">Add to Cart</button>
+</div>
+<p id="cartMessage"></p>
+<p id="shareMessage"></p>
+<button class="share-btn">🔗 Share Product</button>
+<a href="products.html" class="back-btn">← Back to Products</a>
+            
+        </div>
+
+    </div>
+
+    <script>
+
+const products = {
+    "classic-silver": {
+        name: "Classic Silver",
+        price: "₹2,499",
+        image: "classic-silver.jpg",
+        description: "A stylish and elegant classic silver watch designed for everyday wear.",
+        warranty: "1 Year Manufacturer Warranty",
+        color: "Silver",
+        strap: "Stainless Steel",
+        material: "Premium Steel",
+        water: "Yes"
+    },
+
+    "black-edition": {
+        name: "Black Edition",
+        price: "₹3,299",
+        image: "black-edition.jpg",
+        description: "A bold and stylish black watch with a modern premium design.",
+        warranty: "1 Year Manufacturer Warranty",
+        color: "Black",
+        strap: "Premium Leather",
+        material: "Stainless Steel",
+        water: "Yes"
+    },
+
+    "brown-leather": {
+        name: "Brown Leather",
+        price: "₹2,799",
+        image: "brown-leather.jpg",
+        description: "A classic brown leather watch with an elegant everyday style.",
+        warranty: "1 Year Manufacturer Warranty",
+        color: "Brown",
+        strap: "Leather",
+        material: "Stainless Steel",
+        water: "Yes"
+    },
+
+    "diamond-shine": {
+        name: "Diamond Shine",
+        price: "₹4,999",
+        image: "diamond-shine.jpg",
+        description: "A premium watch with a stylish diamond-inspired shine.",
+        warranty: "1 Year Manufacturer Warranty",
+        color: "Silver",
+        strap: "Metal",
+        material: "Premium Alloy",
+        water: "Yes"
+    },
+
+    "golden-chronograph": {
+        name: "Golden Chronograph",
+        price: "₹5,499",
+        image: "golden-chronograph.jpg",
+        description: "A luxurious golden chronograph watch with a premium finish.",
+        warranty: "1 Year Manufacturer Warranty",
+        color: "Gold",
+        strap: "Stainless Steel",
+        material: "Premium Steel",
+        water: "Yes"
+    },
+
+    "luxury-pearl": {
+        name: "Luxury Pearl",
+        price: "₹3,999",
+        image: "luxury-pearl.jpg",
+        description: "An elegant luxury watch with a beautiful pearl-inspired design.",
+        warranty: "1 Year Manufacturer Warranty",
+        color: "Pearl White",
+        strap: "Premium Metal",
+        material: "Stainless Steel",
+        water: "No"
+    },
+
+    "pink-blossom": {
+        name: "Pink Blossom",
+        price: "₹2,999",
+        image: "pink-blossom.jpg",
+        description: "A stylish pink watch designed with a soft and elegant look.",
+        warranty: "1 Year Manufacturer Warranty",
+        color: "Pink",
+        strap: "Premium Metal",
+        material: "Stainless Steel",
+        water: "Yes"
+    },
+
+    "rose-gold-elegance": {
+        name: "Rose Gold Elegance",
+        price: "₹2,999",
+        image: "rose-gold-elegance.jpg",
+        description: "An elegant rose gold watch with a stylish and premium appearance.",
+        warranty: "1 Year Manufacturer Warranty",
+        color: "Rose Gold",
+        strap: "Metal",
+        material: "Premium Steel",
+        water: "Yes"
+    },
+
+    "royal-blue": {
+        name: "Royal Blue",
+        price: "₹3,499",
+        image: "royal-blue.jpg",
+        description: "A stylish royal blue watch with a modern and premium design.",
+        warranty: "1 Year Manufacturer Warranty",
+        color: "Blue",
+        strap: "Leather",
+        material: "Stainless Steel",
+        water: "Yes"
+    },
+
+    "silver-grace": {
+        name: "Silver Grace",
+        price: "₹2,999",
+        image: "silver-grace.jpg",
+        description: "A graceful silver watch perfect for everyday elegance.",
+        warranty: "1 Year Manufacturer Warranty",
+        color: "Silver",
+        strap: "Metal",
+        material: "Stainless Steel",
+        water: "Yes"
+    },
+
+    "sport-black": {
+        name: "Sport Black",
+        price: "₹3,799",
+        image: "sport-black.jpg",
+        description: "A sporty black watch designed for an active and modern lifestyle.",
+        warranty: "1 Year Manufacturer Warranty",
+        color: "Black",
+        strap: "Silicone",
+        material: "Stainless Steel",
+        water: "Yes"
+    },
+
+    "blue-dial": {
+        name: "Blue Dial",
+        price: "₹3,199",
+        image: "blue-dial.jpg",
+        description: "A stylish blue dial watch with a premium and elegant finish.",
+        warranty: "1 Year Manufacturer Warranty",
+        color: "Blue",
+        strap: "Stainless Steel",
+        material: "Premium Steel",
+        water: "Yes"
+    }
+};
+
+const params = new URLSearchParams(window.location.search);
+const productId = params.get("product");
+const product = products[productId];
+
+if (product) {
+    document.getElementById("productImage").src = product.image;
+    document.getElementById("productImage").alt = product.name;
+
+    document.getElementById("productName").textContent = product.name;
+    document.getElementById("productPrice").textContent = product.price;
+    document.getElementById("productDescription").textContent = product.description;
+    document.getElementById("productWarranty").textContent = product.warranty;
+
+    document.getElementById("productColor").textContent = product.color;
+    document.getElementById("productStrap").textContent = product.strap;
+    document.getElementById("productMaterial").textContent = product.material;
+    document.getElementById("productWater").textContent = product.water;
+}
+
+document.querySelector(".wishlist").addEventListener("click", function () {
+    this.textContent = this.textContent === "♡" ? "♥" : "♡";
+});
+
+document.querySelector(".add-cart").addEventListener("click", function () {
+    document.getElementById("cartMessage").textContent =
+        "✓ Product added to cart!";
+});
+
+document.querySelector(".buy-now").addEventListener("click", function () {
+    document.getElementById("buyMessage").textContent =
+        "✓ Your order has been placed successfully!";
+});
+
+let quantity = 1;
+
+document.getElementById("increase").addEventListener("click", function () {
+    quantity++;
+    document.getElementById("quantityValue").textContent = quantity;
+});
+
+document.getElementById("decrease").addEventListener("click", function () {
+    if (quantity > 1) {
+        quantity--;
+        document.getElementById("quantityValue").textContent = quantity;
+    }
+});
+document.querySelector(".share-btn").addEventListener("click", function () {
+    navigator.clipboard.writeText(window.location.href);
+
+    document.getElementById("shareMessage").textContent =
+        "✓ Product link copied!";
+});
+</script>
+        
+    </script>
+
+</body>
+</html>
