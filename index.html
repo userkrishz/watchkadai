@@ -3,15 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Watch Kadai </title>
+  <title>Watch Kadai | Timeless Elegance</title>
+  
+  <link rel="stylesheet" href="navbar.css">
+  
   <link rel="stylesheet" href="home.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Shared Navbar across all pages -->
   <header class="navbar">
-    <div class="logo">Watch Kadai</div>
-    <nav>
+    <a href="index.html" class="logo">WATCH<span>KADAI</span></a>
+    
+    <nav class="nav-center">
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -20,44 +27,160 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+
+    <div class="nav-right">
+      <a href="wishlist.html" class="nav-icon" aria-label="Wishlist">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+      </a>
+      <a href="cart.html" class="nav-icon" aria-label="Shopping Cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+      </a>
+      <a href="profile.html" class="nav-icon" aria-label="Account Profile">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </a>
+    </div>
   </header>
 
-  <!-- Hero Section -->
   <main>
     <section class="hero">
       <div class="hero-content">
-        <h1>Building Better Web Experiences Together</h1>
-        <p>Explore our collaborative team showcase, featured products, and verified client stories.</p>
+        <span class="tagline">CRAFTED WITHOUT COMPROMISE</span>
+        <h1>Timeless Elegance on Your Wrist</h1>
+        <p>Bold chronographs engineered for leaders, visionaries, and those who let their presence speak first.</p>
         <div class="hero-buttons">
-          <a href="products.html" class="btn primary-btn">View Products</a>
-          <a href="about.html" class="btn secondary-btn">About Us</a>
+          <a href="products.html" class="btn primary-btn">Explore Collection</a>
+          <a href="about.html" class="btn secondary-btn">Our Journey</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="glow-effect"></div>
+        <img src="mainimage.webp" alt="Luxury Watch Showcase" class="watch-img">
+      </div>
+    </section>
+
+    <div class="trust-bar-wrapper">
+      <div class="trust-bar">
+        <div class="trust-item">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="3" width="15" height="13"></rect>
+            <polygon points="16 8 20 8 23 11 23 16 16 8"></polygon>
+            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+          </svg>
+          <div class="trust-text">
+            <h4>Free Delivery</h4>
+            <p>Tracked to your door</p>
+          </div>
+        </div>
+
+        <div class="trust-divider"></div>
+
+        <div class="trust-item">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <div class="trust-text">
+            <h4>100% Secure Checkout</h4>
+            <p>End-to-end encrypted</p>
+          </div>
+        </div>
+
+        <div class="trust-divider"></div>
+
+        <div class="trust-item">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <div class="trust-text">
+            <h4>2-Year Warranty</h4>
+            <p>Hassle-free repairs</p>
+          </div>
+        </div>
+
+        <div class="trust-divider"></div>
+
+        <div class="trust-item">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <div class="trust-text">
+            <h4>24/7 Assistance</h4>
+            <p>Dedicated watch specialists</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="products-header">
+      <span class="tagline">FEATURED TIMEPIECES</span>
+      <h2>Signature Editions</h2>
+      <p>Precision automatic and chronograph movements engineered with 316L solid steel.</p>
+    </section>
+
+    <section class="product-grid">
+      <div class="product-card">
+        <img src="diamond-shine.jpg" alt="Luxury Diamond Metal">
+        <h3>Diamond Shine</h3>
+        <p class="product-desc">A premium watch with a stylish diamond-inspired shine.</p>
+        <div class="card-actions">
+          <a href="products.html" class="btn primary-btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="royal-blue.jpg" alt="Classic Blue Metal">
+        <h3>Royal Blue</h3>
+        <p class="product-desc">A stylish royal blue watch with a modern and premium design.</p>
+        <div class="card-actions">
+          <a href="products.html" class="btn primary-btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="classic-silver.jpg" alt="Classic Silver Metal">
+        <h3>Classic Silver</h3>
+        <p class="product-desc">A stylish and elegant classic silver watch designed for everyday wear.</p>
+        <div class="card-actions">
+          <a href="products.html" class="btn primary-btn">View Details</a>
         </div>
       </div>
     </section>
 
-    <!-- Quick Highlights Section -->
     <section class="features">
       <div class="feature-card">
-        <h3>Quality Products</h3>
-        <p>Carefully crafted selections designed to deliver top performance.</p>
-        <a href="products.html" class="card-link">Explore →</a>
+        <span class="card-num">01</span>
+        <h3>Discover</h3>
+        <p>Handpicked automatic and chronograph designs built for daily wear and special occasions.</p>
+        <a href="products.html" class="card-link">View Collections →</a>
       </div>
       <div class="feature-card">
-        <h3>Client Reviews</h3>
-        <p>Real feedback from people who trust our solutions.</p>
-        <a href="reviews.html" class="card-link">Read Reviews →</a>
+        <span class="card-num">02</span>
+        <h3>Reviews</h3>
+        <p>Trusted impressions and real ratings from passionate watch collectors worldwide.</p>
+        <a href="review.html" class="card-link">Read Stories →</a>
       </div>
       <div class="feature-card">
-        <h3>Get in Touch</h3>
-        <p>Have questions? Reach out directly to our support and team leads.</p>
+        <span class="card-num">03</span>
+        <h3>Quick Help</h3>
+        <p>Dedicated watch specialists ready to assist with sizing, orders, and inquiries.</p>
         <a href="contact.html" class="card-link">Contact Us →</a>
       </div>
     </section>
   </main>
 
-  <!-- Shared Footer -->
   <footer>
-    <p>&copy; 2026 Team Project. Built collaboratively with Git & GitHub.</p>
+    <p>&copy; 2026 Watch Kadai. Handcrafted with Precision.</p>
   </footer>
 
 </body>
