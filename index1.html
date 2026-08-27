@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Kadai | Product Collection</title>
+  <link rel="stylesheet" href="home1.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* Products Page Grid Styles */
+    .products-header {
+      text-align: center;
+      padding: 4rem 8% 2rem 8%;
+    }
+    .products-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin-bottom: 0.8rem;
+    }
+    .products-header p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem 8% 5rem 8%;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .product-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-glow);
+      border-radius: 8px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-gold);
+    }
+    .product-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 1.2rem;
+    }
+    .product-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .product-price {
+      color: var(--accent-gold);
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .card-actions {
+      margin-top: auto;
+      display: flex;
+      gap: 0.8rem;
+    }
+    .card-actions .btn {
+      flex: 1;
+      padding: 0.7rem;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">WATCH<span>KADAI</span></div>
+    
+    <!-- Centered Navigation -->
+    <nav class="nav-center">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Right Corner Actions -->
+    <div class="nav-right">
+      <button class="nav-btn" onclick="buyNow('watch-01', 'Chronos Steel Edition', 6999, 'product1.jpg')">Buy Now</button>
+      <button class="nav-icon" onclick="openCartDrawer()" aria-label="View Cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span id="cart-count" class="cart-badge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Sliding Cart Drawer -->
+  <div id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3>Your Selection</h3>
+      <button class="close-btn" onclick="closeCartDrawer()">✕</button>
+    </div>
+    <div id="cart-items-list" class="cart-items">
+      <!-- Injected dynamically by cart.js -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <strong id="cart-total-price">₹0</strong>
+      </div>
+      <button class="btn primary-btn checkout-btn" onclick="alert('Proceeding to checkout!')">Checkout Now</button>
+    </div>
+  </div>
+
+  <main>
+    <!-- TOP PAGE: Hero Section with Watch Background -->
+    <section class="hero">
+      <div class="hero-content">
+        <span class="tagline">CRAFTED WITHOUT COMPROMISE</span>
+        <h1>Timeless Elegance on Your Wrist</h1>
+        <p>Bold chronographs engineered for leaders, visionaries, and those who let their presence speak first.</p>
+        <div class="hero-buttons">
+          <a href="#collection" class="btn primary-btn">Explore More</a>
+          <a href="about.html" class="btn secondary-btn">Our Journey</a>
+        </div>
+      </div>
+
+      <!-- Luxury Watch Visual Showcase -->
+      <div class="hero-visual">
+        <div class="glow-effect"></div>
+        <img 
+          src="mainimage.webp" 
+          alt="Luxury Watch Showcase" 
+          class="watch-img"
+        >
+      </div>
+    </section>
+
+    <!-- Why Choose Us / Trust Bar -->
+    <div class="trust-bar-wrapper">
+      <div class="trust-bar">
+        <div class="trust-item">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="3" width="15" height="13"></rect>
+            <polygon points="16 8 20 8 23 11 23 16 16 8"></polygon>
+            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+          </svg>
+          <div class="trust-text">
+            <h4>Free Delivery</h4>
+            <p>Tracked to your door</p>
+          </div>
+        </div>
+
+        <div class="trust-divider"></div>
+
+        <div class="trust-item">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <div class="trust-text">
+            <h4>100% Secure Checkout</h4>
+            <p>End-to-end encrypted</p>
+          </div>
+        </div>
+
+        <div class="trust-divider"></div>
+
+        <div class="trust-item">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <div class="trust-text">
+            <h4>2-Year Warranty</h4>
+            <p>Hassle-free repairs</p>
+          </div>
+        </div>
+
+        <div class="trust-divider"></div>
+
+        <div class="trust-item">
+          <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <div class="trust-text">
+            <h4>24/7 Assistance</h4>
+            <p>Dedicated watch specialists</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Grid Section -->
+    <section id="collection" class="products-header">
+      <span class="tagline">TIMEPIECES</span>
+      <h2>Curated Collection</h2>
+      <p>Precision automatic and chronograph movements engineered with 316L solid steel.</p>
+    </section>
+
+    <section class="product-grid">
+      <!-- Product Item 1 -->
+      <div class="product-card">
+        <img src="product1.jpg" alt="Chronos Steel Edition">
+        <h3>Chronos Steel Edition</h3>
+        <div class="product-price">₹6,999</div>
+        <div class="card-actions">
+          <button class="btn secondary-btn" onclick="addToCart('watch-01', 'Chronos Steel Edition', 6999, 'product1.jpg')">Add to Cart</button>
+          <button class="btn primary-btn" onclick="buyNow('watch-01', 'Chronos Steel Edition', 6999, 'product1.jpg')">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Product Item 2 -->
+      <div class="product-card">
+        <img src="product2.webp" alt="Grand Heritage Leather">
+        <h3>Grand Heritage Leather</h3>
+        <div class="product-price">₹7,499</div>
+        <div class="card-actions">
+          <button class="btn secondary-btn" onclick="addToCart('watch-02', 'Grand Heritage Leather', 7499, 'product2.webp')">Add to Cart</button>
+          <button class="btn primary-btn" onclick="buyNow('watch-02', 'Grand Heritage Leather', 7499, 'product2.webp')">Buy Now</button>
+        </div>
+      </div>
+
+      <!-- Product Item 3 -->
+      <div class="product-card">
+        <img src="product3.webp" alt="Grand Heritage Gold">
+        <h3>Grand Heritage Gold</h3>
+        <div class="product-price">₹8,999</div>
+        <div class="card-actions">
+          <button class="btn secondary-btn" onclick="addToCart('watch-03', 'Grand Heritage Gold', 8999, 'product3.webp')">Add to Cart</button>
+          <button class="btn primary-btn" onclick="buyNow('watch-03', 'Grand Heritage Gold', 8999, 'product3.webp')">Buy Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated Features -->
+    <section class="features">
+      <div class="feature-card">
+        <span class="card-num">01</span>
+        <h3>Discover</h3>
+        <p>Handpicked automatic and chronograph designs built for daily wear and special occasions.</p>
+        <a href="products.html" class="card-link">View Collections →</a>
+      </div>
+      <div class="feature-card">
+        <span class="card-num">02</span>
+        <h3>Reviews</h3>
+        <p>Trusted impressions and real ratings from passionate watch collectors worldwide.</p>
+        <a href="reviews.html" class="card-link">Read Stories →</a>
+      </div>
+      <div class="feature-card">
+        <span class="card-num">03</span>
+        <h3>Quick Help</h3>
+        <p>Dedicated watch specialists ready to assist with sizing, orders, and inquiries.</p>
+        <a href="contact.html" class="card-link">Contact Us →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Watch Kadai. Handcrafted with Precision.</p>
+  </footer>
+
+  <!-- External Cart Logic -->
+  <script src="cart.js"></script>
+</body>
+</html>
