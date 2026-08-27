@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Watch Kadai | Cart</title>
+
+    <link rel="stylesheet" href="cart.css">
+
+</head>
+
+
+<body>
+
+    <div class="cart-container">
+
+        <h1>🛒 Your Shopping Cart</h1>
+
+
+        <!-- PRODUCTS WILL APPEAR HERE -->
+
+        <div id="cartItems"></div>
+
+
+        <a href="products.html"
+            class="continue-shopping">
+
+            ← Continue Shopping
+
+        </a>
+
+
+        <!-- TOTAL -->
+
+        <div class="order-summary">
+
+            <h2>Order Summary</h2>
+
+
+            <div class="summary-row">
+
+                <span>Subtotal</span>
+
+                <span id="subtotal">₹0</span>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>Delivery</span>
+
+                <span>FREE</span>
+
+            </div>
+
+
+            <hr>
+
+
+            <div class="summary-row total">
+
+                <strong>Total</strong>
+
+                <strong id="grandTotal">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <button class="checkout-btn" onclick="goToCheckout()">
+    Proceed to Checkout
+</button>
+        </div>
+
+    </div>
+
+
+    <script src="cart.js"></script>
+
+</body>
+
+</html>

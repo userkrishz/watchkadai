@@ -6,7 +6,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+    background: linear-gradient(135deg, #080808, #1a1a1a);
+    color: #f5f5f5;
     min-height: 100vh;
     padding: 50px 8%;
 }
@@ -14,18 +15,19 @@ body {
 .product-details-container {
     max-width: 1100px;
     margin: auto;
-    background: #ffffff;
+    background: #151515;
     display: flex;
     align-items: center;
     gap: 60px;
     padding: 50px;
     border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    border: 1px solid #b8860b;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
-
 .product-image {
     width: 48%;
-    background: #f7f7f7;
+    background: linear-gradient(145deg, #1c1c1c, #101010);
+    border: 1px solid #3d3215;
     border-radius: 18px;
     padding: 35px;
     display: flex;
@@ -44,40 +46,34 @@ body {
 .product-image img:hover {
     transform: scale(1.08);
 }
-
-.product-info {
-    width: 52%;
-}
-
 .product-info h1 {
     font-size: 42px;
-    color: #222;
+    color: #ffffff;
     margin-bottom: 12px;
 }
 
 .product-info h2 {
     font-size: 30px;
-    color: #b8860b;
+    color: #d4af37;
     margin-bottom: 25px;
 }
 
 .description {
     font-size: 17px;
     line-height: 1.7;
-    color: #666;
+    color: #cccccc;
     margin-bottom: 25px;
 }
 
 .product-info p {
     font-size: 16px;
     margin-bottom: 15px;
-    color: #444;
+    color: #dddddd;
 }
 
 .product-info strong {
-    color: #222;
+    color: #ffffff;
 }
-
 .buttons {
     display: flex;
     gap: 15px;
@@ -161,14 +157,14 @@ body {
 }
 
 .offer {
-    background: #fff4d6;
-    color: #9a6b00;
-    padding: 12px 15px;
+    background: #2a2418;
+    color: #d4af37;
+    border: 1px solid #b8860b;
+    padding: 14px 18px;
     border-radius: 8px;
     font-weight: bold;
     margin-bottom: 12px;
 }
-
 .secure {
     color: #555;
     font-size: 15px;
@@ -240,7 +236,8 @@ body {
     text-align: center;
 }
 .specifications {
-    background: #f8f8f8;
+    background: #1c1c1c;
+    border: 1px solid #3d3215;
     padding: 18px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -255,6 +252,7 @@ body {
 .specifications p {
     margin-bottom: 8px;
     font-size: 15px;
+    color: #dddddd;
 }
 .share-btn {
     margin-top: 15px;

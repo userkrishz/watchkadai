@@ -54,8 +54,11 @@
     <button id="increase">+</button>
 </div>
 <div class="buttons">
-    <button class="buy-now">Buy Now</button>
-    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now" onclick="buyNow()">Buy Now</button>
+
+    <button class="add-cart" onclick="addToCart()">
+    Add to Cart
+</button>
 </div>
 <p id="cartMessage"></p>
 <p id="shareMessage"></p>
@@ -269,6 +272,79 @@ document.querySelector(".share-btn").addEventListener("click", function () {
 </script>
         
     </script>
+<script>
+
+function addToCart() {
+
+    alert("🛒 Product added to cart successfully!");
+
+}
+
+function buyNow() {
+
+    let cart =
+        JSON.parse(localStorage.getItem("cart")) || [];
+
+
+    const existingProduct = cart.find(
+        item => item.name === product.name
+    );
+
+
+    if (existingProduct) {
+
+        existingProduct.quantity += quantity;
+
+    } else {
+
+        cart.push({
+
+            name: product.name,
+
+            price: product.price,
+
+            image: product.image,
+
+            quantity: quantity
+
+        });
+
+    }
+
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+
+    window.location.href = "checkout.html";
+
+}
+function addToCart() {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existingProduct = cart.find(
+        item => item.name === product.name
+    );
+
+    if (existingProduct) {
+        existingProduct.quantity += quantity;
+    } else {
+        cart.push({
+            name: product.name,
+            price: product.price,
+            image: product.image,
+            quantity: quantity
+        });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    window.location.href = "cart.html";
+}
+</script>
 
 </body>
 </html>

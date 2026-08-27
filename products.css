@@ -10,10 +10,9 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    color: #222;
+    background: linear-gradient(135deg, #080808, #181818, #0d0d0d);
+    color: white;
 }
-
 /* Top Bar */
 
 .top-bar {
@@ -117,11 +116,12 @@ nav a:hover {
 /* Product Card */
 
 .product-card {
-    background-color: white;
+    background: linear-gradient(145deg, #1c1c1c, #101010);
+    border: 1px solid #3d3215;
     padding: 22px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     transition: 0.3s;
 }
 
@@ -153,9 +153,9 @@ nav a:hover {
 .product-card button {
     width: 100%;
     padding: 13px;
-    background-color: #151515;
-    color: white;
-    border: none;
+    background: transparent;
+    color: #d4af37;
+    border: 1px solid #d4af37;
     border-radius: 6px;
     font-size: 15px;
     cursor: pointer;
@@ -163,7 +163,8 @@ nav a:hover {
 }
 
 .product-card button:hover {
-    background-color: #b8860b;
+    background-color: #d4af37;
+    color: #111;
 }
 
 /* Tablet */
@@ -216,14 +217,18 @@ nav a:hover {
     width: 100%;
     padding: 12px;
     margin-top: 15px;
-    background-color: #222;
-    color: white;
+    background: transparent;
+    color: #d4af37;
+    border: 1px solid #d4af37;
     text-decoration: none;
     border-radius: 6px;
+    text-align: center;
+    transition: 0.3s;
 }
 
 .view-btn:hover {
-    background-color: #555;
+    background-color: #d4af37;
+    color: #111;
 }
 #cartMessage {
     color: green;
