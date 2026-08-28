@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Contact Us - ChronoTime</title>
-<body class="contactpage"></body>
+
     <style>
+
+        /* ==============================
+           BASIC PAGE SETTINGS
+        ============================== */
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-.contact-page {
-    background-color: #000;
-    color: black;
-    min-height: 100vh;
-}
 
-.contact-page h1,
-.contact-page h2,
-.contact-page p,
-.contact-page label 
-{
-    color:#000;
-}
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-color:#000000
-            color: black;
+            background-color: #000000;
+            color: #ffffff;
         }
 
-        /* Main Contact Section */
+
+        /* ==============================
+           MAIN CONTACT SECTION
+        ============================== */
 
         .contact-section {
             min-height: 100vh;
-            padding: 70px 8%;
+            padding: 90px 10%;
+            background-color: #000000;
         }
+
+
+        /* ==============================
+           PAGE TITLE
+        ============================== */
 
         .contact-title {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 10px;
         }
 
         .contact-title h1 {
-            font-size: 45px;
-            margin-bottom: 10px;
+            font-size: 58px;
+            font-weight: 700;
+            color: #ffffff;
         }
 
         .contact-title h1 span {
@@ -54,202 +56,308 @@
         }
 
         .contact-title p {
-            color: #666;
-            font-size: 17px;
+            margin-top: 15px;
+            font-size: 22px;
+            color: #ffffff;
         }
 
 
-        /* Contact Container */
+        /* ==============================
+           MAIN CONTENT
+        ============================== */
 
-        .contact-container {
-            max-width: 1100px;
-            margin: auto;
+        .contact-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 80px;
 
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-
-            gap: 40px;
+            max-width: 1200px;
+            margin: 65px auto 0;
         }
 
 
-        /* Contact Information */
+        /* ==============================
+           LEFT SIDE INFORMATION
+        ============================== */
 
         .contact-info {
-            background-color: black;
-            color: black;
-
-            padding: 40px;
-
-            border-radius: 12px;
+            width: 48%;
+            padding-top: 125px;
         }
 
-        .contact-info h2 {
-            font-size: 30px;
-            margin-bottom: 20px;
+        .contact-info > p {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #ffffff;
+            margin-bottom: 35px;
+            max-width: 550px;
         }
 
-        .contact-info>p {
-            color: #ccc;
-            margin-bottom: 30px;
-            line-height: 1.7;
-        }
 
-        .info-box {
+        /* ==============================
+           INFORMATION ITEMS
+        ============================== */
+
+        .info-item {
             display: flex;
             align-items: flex-start;
-
-            gap: 15px;
-
-            margin-bottom: 25px;
+            margin-bottom: 28px;
         }
 
         .info-icon {
-            font-size: 25px;
+            width: 55px;
+            font-size: 28px;
+            text-align: center;
+            margin-right: 10px;
         }
 
-        .info-box h3 {
-            margin-bottom: 5px;
+        .info-text h3 {
+            font-size: 24px;
             color: #d4af37;
+            margin-bottom: 5px;
         }
 
-        .info-box p {
-            color: #ccc;
+        .info-text p {
+            font-size: 19px;
+            color: #ffffff;
+            line-height: 1.5;
         }
 
 
-        /* Contact Form */
+        /* ==============================
+           RIGHT SIDE FORM
+        ============================== */
 
         .contact-form {
-            background-color:#111;
+            width: 52%;
+            background-color: #111111;
 
-            padding: 40px;
+            padding: 50px;
 
-            border-radius: 12px;
+            border-radius: 16px;
 
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
         }
+
+
+        /* ==============================
+           FORM HEADING
+        ============================== */
 
         .contact-form h2 {
-            font-size: 30px;
-            margin-bottom: 25px;
+            font-size: 36px;
+            color: #ffffff;
+            margin-bottom: 35px;
+        }
+
+        .contact-form h2::first-letter {
+            color: #ffffff;
         }
 
 
+        /* ==============================
+           FORM LABELS
+        ============================== */
+
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .form-group label {
             display: block;
 
-            margin-bottom: 8px;
+            font-size: 18px;
+            font-weight: 600;
 
-            font-size: 15px;
-            font-weight: bold;
+            color: #ffffff;
+
+            margin-bottom: 10px;
         }
+
+
+        /* ==============================
+           INPUT BOXES
+        ============================== */
 
         .form-group input,
         .form-group textarea {
+
             width: 100%;
 
-            padding: 13px 15px;
+            padding: 17px 20px;
 
-            border: 1px solid #ddd;
+            background-color: #000000;
 
-            border-radius: 6px;
+            color: #ffffff;
 
-            font-size: 15px;
+            border: 1px solid #d4af37;
+
+            border-radius: 8px;
+
+            font-size: 17px;
 
             outline: none;
 
             transition: 0.3s;
         }
 
+
+        /* ==============================
+           INPUT PLACEHOLDER
+        ============================== */
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #aaaaaa;
+        }
+
+
+        /* ==============================
+           INPUT FOCUS
+        ============================== */
+
         .form-group input:focus,
         .form-group textarea:focus {
-            border-color: #d4af37;
+            border-color: #ffffff;
+
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
         }
+
+
+        /* ==============================
+           MESSAGE BOX
+        ============================== */
 
         .form-group textarea {
-            height: 140px;
-
-            resize: vertical;
+            height: 150px;
+            resize: none;
         }
 
 
-        /* Submit Button */
+        /* ==============================
+           SEND BUTTON
+        ============================== */
 
-        .submit-btn {
+        .send-button {
             width: 100%;
 
-            padding: 14px;
+            padding: 17px;
 
-            background-color: #111;
+            background-color: #d4af37;
 
             color: #000000;
 
             border: none;
 
-            border-radius: 6px;
+            border-radius: 8px;
 
-            font-size: 16px;
+            font-size: 18px;
+
+            font-weight: 700;
 
             cursor: pointer;
 
             transition: 0.3s;
         }
 
-        .submit-btn:hover {
-            background-color: #d4af37;
+        .send-button:hover {
+            background-color: #ffffff;
 
-            color: #111;
+            color: #000000;
+
+            transform: translateY(-2px);
         }
 
 
-        /* Responsive Design */
+        /* ==============================
+           MOBILE RESPONSIVE
+        ============================== */
 
-        @media (max-width: 800px) {
+        @media (max-width: 900px) {
 
-            .contact-container {
-                grid-template-columns: 1fr;
+            .contact-section {
+                padding: 60px 6%;
+            }
+
+            .contact-title h1 {
+                font-size: 45px;
+            }
+
+            .contact-title p {
+                font-size: 18px;
+            }
+
+            .contact-content {
+                flex-direction: column;
+
+                gap: 40px;
+            }
+
+            .contact-info,
+            .contact-form {
+                width: 100%;
+            }
+
+            .contact-info {
+                padding-top: 20px;
+            }
+
+            .contact-form {
+                padding: 35px;
+            }
+        }
+
+
+        /* ==============================
+           SMALL MOBILE SCREEN
+        ============================== */
+
+        @media (max-width: 500px) {
+
+            .contact-section {
+                padding: 45px 5%;
             }
 
             .contact-title h1 {
                 font-size: 38px;
             }
 
-        }
-
-
-        @media (max-width: 500px) {
-
-            .contact-section {
-                padding: 50px 5%;
+            .contact-title p {
+                font-size: 16px;
             }
 
-            .contact-info,
             .contact-form {
                 padding: 25px;
             }
 
-            .contact-title h1 {
-                font-size: 32px;
+            .contact-form h2 {
+                font-size: 28px;
             }
 
-        }
-    </style>
+            .info-text h3 {
+                font-size: 21px;
+            }
 
+            .info-text p {
+                font-size: 16px;
+            }
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-
-    <!-- Contact Us Section -->
+    <!-- =================================
+         CONTACT US MAIN SECTION
+    ================================== -->
 
     <section class="contact-section">
 
 
-        <!-- Page Title -->
+        <!-- PAGE TITLE -->
 
         <div class="contact-title">
 
@@ -258,44 +366,42 @@
             </h1>
 
             <p>
-                Have a question about our watches?
-                We would love to hear from you.
+                Have a question about our watches? We would love to hear from you.
             </p>
 
         </div>
 
 
-        <!-- Contact Container -->
 
-        <div class="contact-container">
+        <!-- MAIN CONTENT -->
+
+        <div class="contact-content">
 
 
-            <!-- Contact Information -->
+            <!-- =================================
+                 LEFT SIDE - CONTACT INFORMATION
+            ================================== -->
 
             <div class="contact-info">
 
-                <h2>
-                    Get In Touch
-                </h2>
 
                 <p>
-                    Our ChronoTime team is here to help you
-                    with product information, orders, delivery
-                    and any other questions.
+                    Our ChronoTime team is here to help you with product
+                    information, orders, delivery and any other questions.
                 </p>
 
 
-                <div class="info-box">
+                <!-- ADDRESS -->
+
+                <div class="info-item">
 
                     <div class="info-icon">
                         📍
                     </div>
 
-                    <div>
+                    <div class="info-text">
 
-                        <h3>
-                            Address
-                        </h3>
+                        <h3>Address</h3>
 
                         <p>
                             Chennai, Tamil Nadu, India
@@ -306,17 +412,18 @@
                 </div>
 
 
-                <div class="info-box">
+
+                <!-- EMAIL -->
+
+                <div class="info-item">
 
                     <div class="info-icon">
                         📧
                     </div>
 
-                    <div>
+                    <div class="info-text">
 
-                        <h3>
-                            Email
-                        </h3>
+                        <h3>Email</h3>
 
                         <p>
                             info@watchkadai@gmail.com
@@ -327,17 +434,18 @@
                 </div>
 
 
-                <div class="info-box">
+
+                <!-- PHONE -->
+
+                <div class="info-item">
 
                     <div class="info-icon">
                         📞
                     </div>
 
-                    <div>
+                    <div class="info-text">
 
-                        <h3>
-                            Phone
-                        </h3>
+                        <h3>Phone</h3>
 
                         <p>
                             +91 98765 43210
@@ -347,24 +455,22 @@
 
                 </div>
 
-                <div class="info-box">
+
+
+                <!-- WORKING HOURS -->
+
+                <div class="info-item">
 
                     <div class="info-icon">
-                        🕒
+                        🕘
                     </div>
 
-                    <div>
+                    <div class="info-text">
 
-                        <h3>
-                            Working Hours
-                        </h3>
+                        <h3>Working Hours</h3>
 
                         <p>
                             Monday - Saturday
-                        </p>
-
-                        <p>
-                            9:00 AM - 6:00 PM
                         </p>
 
                     </div>
@@ -374,82 +480,116 @@
             </div>
 
 
-            <!-- Contact Form -->
+
+            <!-- =================================
+                 RIGHT SIDE - CONTACT FORM
+            ================================== -->
 
             <div class="contact-form">
+
 
                 <h2>
                     Send Us a Message
                 </h2>
 
 
-                <form>
+                <!-- FULL NAME -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                    >
+
+                </div>
 
 
-                    <div class="form-group">
 
-                        <label for="name">
-                            Full Name
-                        </label>
+                <!-- EMAIL -->
 
-                        <input type="text" id="name" placeholder="Enter your name" required>
+                <div class="form-group">
 
-                    </div>
+                    <label for="email">
+                        Email Address
+                    </label>
 
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                    >
 
-                    <div class="form-group">
-
-                        <label for="email">
-                            Email Address
-                        </label>
-
-                        <input type="email" id="email" placeholder="Enter your email" required>
-
-                    </div>
+                </div>
 
 
-                    <div class="form-group">
 
-                        <label for="phone">
-                            Phone Number
-                        </label>
+                <!-- PHONE -->
 
-                        <input type="tel" id="phone" placeholder="Enter your phone number">
+                <div class="form-group">
 
-                    </div>
+                    <label for="phone">
+                        Phone Number
+                    </label>
 
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter your phone number"
+                    >
 
-                    <div class="form-group">
-
-                        <label for="subject">
-                            Subject
-                        </label>
-
-                        <input type="text" id="subject" placeholder="Enter subject">
-
-                    </div>
+                </div>
 
 
-                    <div class="form-group">
 
-                        <label for="message">
-                            Message
-                        </label>
+                <!-- SUBJECT -->
 
-                        <textarea id="message" placeholder="Write your message here..." required></textarea>
+                <div class="form-group">
 
-                    </div>
+                    <label for="subject">
+                        Subject
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        placeholder="Enter subject"
+                    >
+
+                </div>
 
 
-                    <button type="submit" class="submit-btn">
-                        Send Message
-                    </button>
+
+                <!-- MESSAGE -->
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        placeholder="Enter your message"
+                    ></textarea>
+
+                </div>
 
 
-                </form>
+
+                <!-- BUTTON -->
+
+                <button class="send-button">
+                    Send Message
+                </button>
+
 
             </div>
-
 
         </div>
 
@@ -457,5 +597,4 @@
 
 
 </body>
-
 </html>
